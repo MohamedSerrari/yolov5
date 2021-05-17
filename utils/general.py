@@ -133,7 +133,8 @@ def check_requirements(requirements='requirements.txt', exclude=()):
     n = 0  # number of packages updates
     for r in requirements:
         try:
-            pkg.require(r)
+            # pkg.require(r)
+            pass
         except Exception as e:  # DistributionNotFound or VersionConflict if requirements not met
             n += 1
             print(f"{prefix} {r} not found and is required by YOLOv5, attempting auto-update...")
